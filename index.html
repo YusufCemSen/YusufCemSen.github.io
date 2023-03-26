@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yusuf Cem Şen</title>
+    <style>
+      /* Navbar styles */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      
+
+      .footer{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 80px;
+        padding:15px;
+        background-color: #000;
+        color:rgb(201, 191, 216);
+
+      }
+
+      .container {
+        display: flex;
+      }
+      
+      .flexbox-1 {
+        flex: 0.25;
+        background-color: #ccc;
+        padding: 20px;
+        
+      }
+      
+      .flexbox-2 {
+        width: 300px;
+        height: 500px;
+        background-color:#ccc; 
+        margin-left: 20px;
+      }
+      
+     
+      /* Sidebar styles */
+      .sidebar {
+        width: 20%;
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        right: 0;
+        top: 10x;
+        display: none;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar li {
+        margin-bottom: 0.5rem;
+      }
+
+      .sidebar a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Show/hide sidebar styles */
+      .active {
+        display: block;
+      }
+         /* Overlay styles */
+         .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 0;
+      }
+
+      .toggle-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+      }
+      
+      .toggle-btn:hover {
+        transform: scale(1.2);
+      }
+      
+      </style>
+
+    
+  </head>
+
+
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#" id="contact-link"></a>
+    </nav>
+
+    <div class="sidebar" id="contact-sidebar">
+        <ul>
+
+          <li><a href = "https://github.com/YusufCemSen/Fiyat-Takip-Uygulamas-">        Fiyat Takip Uygulaması</a></li>
+          <li><a href = "https://github.com/YusufCemSen/Huzurevi_Yonetim-_Otomasyonu">  Huzurevi Yönetim Otomasyonu</a></li>
+          <li><a href = "https://github.com/YusufCemSen/Snake-Game">                    Yılan Oyunu</a></li>
+
+        </ul>
+     
+      </div>
+      <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+    
+    <script>
+
+      function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+      }
+
+    </script>
+
+    <!--Flexbox 1-->
+    <div class="container">
+      <div class="flexbox-1">
+        <image src="C:\Users\Lenovo\Desktop\Ekran Görüntüsü (1).png"></image>
+      </div>
+
+
+       <!--Flexbox 2-->
+      <div class="flexbox-2">
+        <h2>Yusuf Cem Şen</h2>
+        <a href="https://www.linkedin.com/in/yusuf-cem-%C5%9Fen-126947202/" target="_blank">
+            <img src="C:\Users\Lenovo\Desktop\linkeln.png" width="30" height="30">
+        </a>
+
+        <a href="https://github.com/YusufCemSen" target="_blank">
+            <img src="C:\Users\Lenovo\Desktop\git.png" width=30 height="30">
+        </a>
+        <a href= "mailto:ysfcmsen19@gmail.com">
+            <img src="C:\Users\Lenovo\Desktop\png-transparent-iphone-computer-icons-email-email-miscellaneous-blue-angle.png" width=30 height="30">
+        </a>
+      <div> .
+
+      </div>
+
+      <div>
+        I am a 3rd year computer engineering student in Marmara University. As a student I am working in a a Tech company as a back-end developer which uses GIS to serve 
+        their customers. Actually I am working like full stack developer.I am good at object oriented programming and also have good communication skills.
+      </div>
+
+      </div>
+
+       
+      
+    </div>
+
+
+    <footer class="footer">
+      <p>&copy; Yusuf Cem Şen </p>
+    </footer>
+    
+    <script>
+      // Show/hide sidebar when Contact link is clicked
+      const contactLink = document.getElementById("contact-link");
+      const contactSidebar = document.getElementById("contact-sidebar");
+      const overlay = document.querySelector(".overlay");
+    
+      contactLink.addEventListener("click", () => {
+        contactSidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+    
+      // Hide sidebar when overlay is clicked
+      overlay.addEventListener("click", () => {
+        contactSidebar.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    </script>
+    
+    </script>
+  </body>
+</html>
